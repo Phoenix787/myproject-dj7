@@ -51,6 +51,7 @@ $(function() {
     carouselSvc.owlCarousel({
         // loop: true,  //зацикливаем
         nav: true,
+        dots: false,
         navText: ['<i class="fa fa-angle-double-left"></i>', '<i class="fa fa-angle-double-right"></i>'],
         smartSpeed: 700, //скорость
         responsiveClass: true,
@@ -75,8 +76,15 @@ $(function() {
         ths.html(ths.html().replace(/(\S+)\s*$/, '<span>$1</span>'));
     });
 
+//в этой функции будет всё что связано размещением контента при изменении размеров окна
+    function onResize(){
+        $('.carousel-service-content').equalHeights();
 
-    $('.carousel-service-content').equalHeights();
+    }onResize();
+    window.onresize = function () {
+        onResize();
+    };
+
 
 
 

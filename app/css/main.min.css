@@ -9024,10 +9024,10 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: column-reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
 .carousel-service-item:hover .carousel-service-image {
@@ -9046,10 +9046,10 @@ section {
 
 .carousel-service .owl-item:nth-child(2n+2) .carousel-service-item {
   -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-  -webkit-flex-direction: column-reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .carousel-service-image {
@@ -9110,6 +9110,28 @@ section {
   font-size: 14px;
 }
 
+.carousel-service .owl-nav {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+.carousel-service .owl-nav button.owl-prev,
+.carousel-service .owl-nav button.owl-next {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  font-size: 26px;
+  text-align: center;
+}
+
+.carousel-service .owl-nav button.owl-next {
+  right: 0;
+}
+
 .owl-carousel .owl-item {
   -webkit-backface-visibility: inherit;
           backface-visibility: inherit;
@@ -9123,6 +9145,13 @@ section {
   }
   .header-contacts {
     font-size: 14px;
+  }
+  .carousel-service-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 

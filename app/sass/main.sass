@@ -346,7 +346,7 @@ $colors: $blue, $red, $accent
     font-weight: 300
     position: relative
     display: flex
-    flex-direction: column
+    flex-direction: column-reverse
 
     &:hover
       .carousel-service-image
@@ -361,7 +361,7 @@ $colors: $blue, $red, $accent
   .owl-item
     &:nth-child(2n+2)
       .carousel-service-item
-        flex-direction: column-reverse
+        flex-direction: column
 
   &-image
     background-size: cover
@@ -402,8 +402,28 @@ $colors: $blue, $red, $accent
         .fa
           font-size: 14px
 
+  .owl-nav
+    position: absolute
+    width: 100%
+    top: 0
+    button.owl-prev,
+    button.owl-next
+      position: absolute
+      width: 64px
+      height: 64px
+      line-height: 64px
+      background-color: #ffffff
+      color: $dark
+      font-size: 26px
+      text-align: center
+    button.owl-next
+      right: 0
+
 
 .owl-carousel
   .owl-item
     backface-visibility: inherit
+
+
+
 @import "media"
