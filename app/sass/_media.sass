@@ -1,0 +1,71 @@
+@import "vars"
+
+/*===================-Desktop First-======================*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px)
+  .welcome
+    .h1
+      font-size: 55px
+  .header-contacts
+    font-size: 14px
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px)
+  .welcome
+    .h1
+      font-size: 36px
+    p:first-child
+      font-size: 10px
+      letter-spacing: 1px
+
+/* Small Devices, Tablets*/
+@media only screen and (max-width: 768px)
+  .header-contacts
+    .container
+      .row
+        div[class^='col-md-']:nth-child(2)
+          text-align: left
+  .button
+    padding: 12px 36px
+/* Extra Small Devices, Phones*/
+@media only screen and (max-width: 480px)
+  .welcome
+    .h1
+      font-size: 28px
+      margin-top: 5px
+
+    p:first-child
+      font-size: 8px
+      //letter-spacing: 1px
+  .h1 ~ span
+    margin-top: 15px
+    font-size: 14px
+  .header-composition p
+    font-size: 14px
+    margin-top: 20px
+
+/* Custom, IPhone Retina*/
+@media only screen and (max-width: 320px)
+  /**/
+
+
+/*================ Mobile First ================= */
+/* Custom, IPhone Retina*/
+@media only screen and (max-width: 320px)
+  /**/
+
+/* Extra Small Devices, Phones*/
+@media only screen and (max-width: 480px)
+  /**/
+
+/* Small Devices, Tablets*/
+@media only screen and (max-width: 768px)
+  /**/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px)
+  /**/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px)
+  /**/
