@@ -440,6 +440,7 @@ $colors: $blue, $red, $accent
   &-king
     p
       margin: 30px 0
+      font-size: 18px
 
 .section-overlay
   &::before
@@ -451,5 +452,44 @@ $colors: $blue, $red, $accent
     height: 100%
     background-color: $overlay
     opacity: 0.92
+
+.fotorama
+  background-color: rgba($dark, .4)
+  &__nav
+    &-wrap
+      position: absolute
+      bottom: 15px
+      left: 0
+      padding: 0 30px
+      width: 100%
+  &__thumb
+    border: 4px solid #ffffff
+    transition: border-color 0.5s ease
+    &-border
+      border-color: #3d3c3c
+  &__active
+    .fotorama__thumb
+      border-color: #3d3c3c
+  &__video-close
+    display: none
+  &__arr
+    &--next, &--prev
+      &::before
+        font-family: fontawesome, sans-serif
+        font-size: 32px
+    &--next
+      &::before
+        content: '\f105'
+    &--prev
+      &::before
+        content: '\f104'
+        margin-left: 15px
+
+.s-call
+  height: 200px
+  .call-wrapper
+    background-color: rgba($accent, 0.95)
+    padding: 40px
+
 
 @import "media"
