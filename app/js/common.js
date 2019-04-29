@@ -47,7 +47,7 @@ $(function() {
             carouselService();
         });
     });
-
+//здесь мы прописываем опции карусели
     carouselSvc.owlCarousel({
         // loop: true,  //зацикливаем
         nav: true,
@@ -76,14 +76,22 @@ $(function() {
         ths.html(ths.html().replace(/(\S+)\s*$/, '<span>$1</span>'));
     });
 
+    $('section .h2').each(function () {
+        var ths = $(this);
+        ths.html(ths.html().replace(/^(\S+)/, '<span>$1</span>'));
+    });
+
 //в этой функции будет всё что связано размещением контента при изменении размеров окна
     function onResize(){
         $('.carousel-service-content').equalHeights();
 
     }onResize();
+
     window.onresize = function () {
         onResize();
     };
+
+
 
 
 
