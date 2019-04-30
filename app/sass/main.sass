@@ -28,13 +28,13 @@
   color: #666
   opacity: 1
 
-body input:focus:required:invalid,
-body textarea:focus:required:invalid
-  color: #666
-
-body input:required:valid,
-body textarea:required:valid
-  color: #666
+//body input:focus:required:invalid,
+//body textarea:focus:required:invalid
+//  color: #666
+//
+//body input:required:valid,
+//body textarea:required:valid
+//  color: #666
 
 html, body
   height: 100%
@@ -95,6 +95,8 @@ section
   &.inverse
     color: #fff
     background-color: $dark
+    &.s-call
+      background-color: #ffffff
   .h2
     font-size: 30px
     color: $accent
@@ -342,10 +344,12 @@ section
     span
       font-family: firasans, sans-serif
 
+
 $colors: $blue, $red, $accent
 @for $i from 1 through length($colors)
   .carousel-service .owl-item:nth-child(#{length($colors)}n+#{$i})
     background-color: nth($colors, $i)
+
 
 .carousel-service
   background-color: $dark
@@ -441,6 +445,19 @@ $colors: $blue, $red, $accent
     p
       margin: 30px 0
       font-size: 18px
+  &-call
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: 15%
+    &::before
+      content: ''
+      position: absolute
+      width: 50%
+      right: 0
+      height: 100%
+      background-color: rgba($accent, .92)
+
+
 
 .section-overlay
   &::before
@@ -485,11 +502,116 @@ $colors: $blue, $red, $accent
         content: '\f104'
         margin-left: 15px
 
-.s-call
-  height: 200px
-  .call-wrapper
-    background-color: rgba($accent, 0.95)
-    padding: 40px
+input, textarea, select, .selectize-control.single .selectize-input, .selectize-control.single .selectize-input.input-active
+  background-color: transparent
+  border: 1px solid rgba(#000, 0.1)
+  border-bottom: 2px solid rgba(#000, .1)
+  border-radius: 2px
+  width: 100%
+  padding: 8px 20px
+  outline: none
+  display: inline-block
+  color: #333
+
+
+select, .selectize-control.single .selectize-input, .selectize-control.single .selectize-input.input-active
+  padding: 10px 22px
+
+.selectize-control.single .selectize-input
+  background-image: none
+  box-shadow: none
+
+.selectize-dropdown, .selectize-input, .selectize-input input
+  font-size: inherit
+  overflow: inherit
+  line-height: inherit
+.selectize-input .dropdown-active
+  &::before
+    box-shadow: none
+    background-color: transparent
+
+.selectize-dropdown
+  background-color: rgba($accent, .95)
+  color: inherit
+  .active
+    background-color: darken($accent, 20)
+    color: inherit
+.success
+  display: none
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  text-transform: uppercase
+  font-weight: bold
+  z-index: 10
+  span
+    margin: auto
+  & ~ *
+    transition: all .5s ease
+  &.active
+    & ~ *
+      opacity: .5
+      filter: blur(10px)
+
+
+.callback
+  padding: 25% 0
+  position: relative
+
+  &-logo
+    img
+      width: 100px
+      height: auto
+  .formhead
+    margin-top: 0
+    color: #fff
+  p
+    margin-top: 2%
+
+  input, textarea, select, .selectize-control.single .selectize-input, .selectize-control.single .selectize-input.input-active
+    color: #ffffff
+    width: 100%
+    margin-top: 5%
+    &::-webkit-input-placeholder
+      color: white
+      opacity: 1
+    &::-moz-placeholder
+      color: white
+      opacity: 1
+    &::-ms-input-placeholder
+      color: white
+
+    option
+      color: #333333
+
+  .button
+      margin-top: 40px
+
+
+//.selectize-control
+//  margin-top: 5%
+  //&.single
+  //  .selectize-input
+      //background-color: transparent
+      //background-image: none
+      //border: 1px solid rgba(#000, .1)
+      //border-bottom: 2px solid rgba(#000, .1)
+      //box-shadow: none
+      //padding: 12px 20px
+      //&::after
+      //  border-color: #ffffff transparent transparent
+      //> *
+      //  color: white
+      //  font-size: 16px
+
+
+
+
+
+
+
 
 
 @import "media"
