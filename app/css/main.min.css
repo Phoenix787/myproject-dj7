@@ -10430,15 +10430,24 @@ select, .selectize-control.single .selectize-input, .selectize-control.single .s
   line-height: inherit;
 }
 
-.selectize-input .dropdown-active::before {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+.selectize-input.dropdown-active::before {
   background-color: transparent;
 }
 
 .selectize-dropdown {
   background-color: rgba(249, 200, 105, 0.95);
   color: inherit;
+}
+
+.selectize-dropdown.single {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-width: initial;
+  border-color: transparent;
+  -webkit-border-image: none;
+       -o-border-image: none;
+          border-image: none;
 }
 
 .selectize-dropdown .active {
@@ -10519,6 +10528,19 @@ select, .selectize-control.single .selectize-input, .selectize-control.single .s
 
 .callback .button {
   margin-top: 40px;
+}
+
+.selectize-control.single .selectize-input::after {
+  content: '\f107';
+  border: none;
+  font-family: fontawesome, sans-serif;
+  position: absolute;
+  right: 25px;
+  top: 12px;
+}
+
+.selectize-control.single .selectize-input.dropdown-active::after {
+  content: '\f106';
 }
 
 /*===================-Desktop First-======================*/
