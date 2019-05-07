@@ -10434,27 +10434,6 @@ select, .selectize-control.single .selectize-input, .selectize-control.single .s
   background-color: transparent;
 }
 
-.selectize-dropdown {
-  background-color: rgba(249, 200, 105, 0.95);
-  color: inherit;
-}
-
-.selectize-dropdown.single {
-  border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border-width: initial;
-  border-color: transparent;
-  -webkit-border-image: none;
-       -o-border-image: none;
-          border-image: none;
-}
-
-.selectize-dropdown .active {
-  background-color: #f2a30a;
-  color: inherit;
-}
-
 .success {
   display: none;
   position: absolute;
@@ -10541,6 +10520,27 @@ select, .selectize-control.single .selectize-input, .selectize-control.single .s
 
 .selectize-control.single .selectize-input.dropdown-active::after {
   content: '\f106';
+}
+
+.selectize-control .selectize-dropdown {
+  background-color: rgba(249, 200, 105, 0.95);
+  color: inherit;
+}
+
+.selectize-control .selectize-dropdown.single {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-width: initial;
+  border-color: transparent;
+  -webkit-border-image: none;
+       -o-border-image: none;
+          border-image: none;
+}
+
+.selectize-control .selectize-dropdown .active {
+  background-color: #f2a30a;
+  color: inherit;
 }
 
 /*===================-Desktop First-======================*/

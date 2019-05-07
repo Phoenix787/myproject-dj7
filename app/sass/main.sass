@@ -529,18 +529,7 @@ select, .selectize-control.single .selectize-input, .selectize-control.single .s
   &.dropdown-active::before
     background-color: transparent
 
-.selectize-dropdown
-  background-color: rgba($accent, .95)
-  color: inherit
-  &.single
-    border: none
-    box-shadow: none
-    border-width: initial
-    border-color: transparent
-    border-image: none
-  .active
-    background-color: darken($accent, 20)
-    color: inherit
+
 
 .success
   display: none
@@ -608,7 +597,18 @@ select, .selectize-control.single .selectize-input, .selectize-control.single .s
         top: 12px
       &.dropdown-active::after
         content: '\f106'
-
+  .selectize-dropdown
+    background-color: rgba($accent, .95)
+    color: inherit
+    &.single
+      border: none
+      box-shadow: none
+      border-width: initial
+      border-color: transparent
+      border-image: none
+    .active
+      background-color: darken($accent, 20)
+      color: inherit
 
 
 @import "media"

@@ -113,8 +113,26 @@ $(function() {
     };
 
 
-
-
+    var carouselReview = $('.carousel-review');
+    //здесь мы прописываем опции карусели
+    carouselReview.owlCarousel({
+        // loop: true,  //зацикливаем
+        nav: true,
+        navText: ['<i class="fa fa-angle-double-left"></i>', '<i class="fa fa-angle-double-right"></i>'],
+        smartSpeed: 700, //скорость
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            800: {
+                items: 1
+            },
+            1100: {
+                items: 1
+            }
+        }
+    });
 
 
 
