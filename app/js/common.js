@@ -84,6 +84,22 @@ $(function() {
     //плагин для тега select
     $('select').selectize();
 
+    //функция для появления кнопки наверх
+    $(window).scroll(function () {
+       if ($(this).scrollTop() > $(this).height()) {
+           $('.top').addClass('active');
+       }
+       else {
+           $('.top').removeClass('active');
+       }
+
+    });
+
+    $('.top').click(function () {
+        $('html, body').stop().animate({scrollTop: 0}, 'slow', 'swing');
+    });
+
+
     //E-mail Ajax Send
     $("form.callback").submit(function() { //Change
         var th = $(this);
@@ -117,23 +133,40 @@ $(function() {
     //здесь мы прописываем опции карусели
     carouselReview.owlCarousel({
         // loop: true,  //зацикливаем
-        nav: true,
-        navText: ['<i class="fa fa-angle-double-left"></i>', '<i class="fa fa-angle-double-right"></i>'],
         smartSpeed: 700, //скорость
         responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            800: {
-                items: 1
-            },
-            1100: {
-                items: 1
-            }
-        }
+        items: 1
     });
 
-
-
+    var carouselPartners = $('.partners');
+    //здесь мы прописываем опции карусели
+    carouselPartners.owlCarousel({
+        // loop: true,  //зацикливаем
+        smartSpeed: 700, //скорость
+        responsiveClass: true,
+        responsive : {
+            // breakpoint from 0 up
+            0 : {
+                items : 1
+            },
+            // breakpoint from 480 up
+            480 : {
+                items : 2
+            },
+            // breakpoint from 768 up
+            768 : {
+                items : 3
+            },
+            1100 : {
+                items : 4
+            }
+        },
+        dots: false,
+        nav: true,
+        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>']
+    });
+//для прелоадера
+    $(window).on('load', function () {
+        $('.preloader').delay(1000).fadeOut('slow');
+    });
 });
